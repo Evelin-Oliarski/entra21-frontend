@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Média com Recuperação</title>
+</head>
+<body>
+    <h1>Calculadora de Média com Recuperação</h1>
+
+    <label for="notaUm">Informe a primeira nota:</label>
+    <input id="notaUm" type="number" placeholder="Digite um valor">
+
+    <label for="notaDois">Informe a segunda nota:</label>
+    <input id="notaDois" type="number" placeholder="Digite um valor">
+
+    <button onclick="media()">Média</button>
+
+    <h2 id="media">Sua média está...</h2>
+    <h2 id="recuperacao"></h2>
+    <h2 id="mensagemNova"></h2>
+
+    <script>
+
+        function media(){
+
+            let notaUm = Number(document.getElementById("notaUm").value);
+            let notaDois = Number(document.getElementById("notaDois").value);
+
+            let media = (notaUm + notaDois) / 2
+
+            if(media >= 7){
+                document.getElementById("media").innerHTML = " APROVADA. Sua média é " + media.toFixed(1) + "!"
+            } else {
+
+                document.getElementById("media").innerHTML = " REPROVADA. Sua média é " + media.toFixed(1) + "! FAÇA SUA RECUPERAÇÃO!"
+                document.getElementById("recuperacao").innerHTML = `
+                
+                <label for="rec">Nota de recuperação:</label>
+                <input id="rec" type="number" placeholder="Digite um valor">
+                <button onclick="recalcular(${notaUm}, ${notaDois})">Recalcular</button>
+                `;
+            }
+        }
+
+        function recalcular(notaUm, notaDois){
+
+            let novaNota = Number(document.getElementById("rec").value);
+
+            let novaMedia = (notaUm + notaDois + novaNota) / 3;
+
+            if(novaMedia >= 7){
+                document.getElementById("mensagemNova").innerHTML = " APROVADA NA RECUPERAÇÃO. Sua média é " + novaMedia.toFixed(1) + "!"
+            } else {
+                document.getElementById("mensagemNova").innerHTML = " REPROVADA NA RECUPERAÇÃO. Sua média é " + novaMedia.toFixed(1) + "!"
+            }
+        }
+
+    </script>
+</body>
+</html>

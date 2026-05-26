@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de número primo</title>
+</head>
+<body>
+    <h1>Verificador de Número Primo</h1>
+
+    <label for="primo">Informe um número: </label>
+    <input id="primo" type="number" placeholder="Digite um número">
+
+    <button onclick="numeroPrimo()">Verificar</button>
+
+    <h2 id="mensagem">Esse número...</h2>
+
+    <script>
+
+        function numeroPrimo(){
+            
+            let numero = Number(document.getElementById("primo").value);
+
+            //Se número for <= 1, não é primo
+            if (numero <= 1) {
+
+                document.getElementById("mensagem").innerHTML = "Esse número NÃO é primo";
+
+            } else {
+
+                let ehPrimo = true;
+
+                // i = 2 é o menor divisor possível além do 1
+                // Math.sqrt(numero) (raiz quadrada do número), ele vai testar divisores só até a raiz quadrada do número
+
+                for (let i = 2; i <= Math.sqrt(numero); i++) {
+
+                    //Se o resto for 0, significa que o número é divisível por i
+                    if (numero % i === 0) {
+                        ehPrimo = false;
+                        break;
+                    }
+                }
+
+                if (ehPrimo) {
+                    document.getElementById("mensagem").innerHTML = "Esse número É primo";
+                } else {
+                    document.getElementById("mensagem").innerHTML = "Esse número NÃO é primo";
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

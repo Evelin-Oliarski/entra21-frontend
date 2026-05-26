@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Triângulos</title>
+</head>
+<body>
+    <h1>Verificador de Triângulos</h1>
+
+    <label for="numeroUm">Informe o primeiro lado do triângulo:</label>
+    <input id="numeroUm" type="number" placeholder="Digite um valor">
+
+    <label for="numeroDois">Informe o segundo lado do triângulo:</label>
+    <input id="numeroDois" type="number" placeholder="Digite um valor">
+
+    <label for="numeroTres">Informe o terceiro lado do triângulo:</label>
+    <input id="numeroTres" type="number" placeholder="Digite um valor">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <h2 id="triangulo">Forma: </h2>
+
+    <script>
+
+        function calcular(){
+
+            let ladoUm = Number(document.getElementById("numeroUm").value);
+            let ladoDois = Number(document.getElementById("numeroDois").value);
+            let ladoTres = Number(document.getElementById("numeroTres").value);
+
+            //Verifica se os valores formam um triângulo
+            if( ladoUm + ladoDois <= ladoTres || ladoUm + ladoTres <= ladoDois || ladoDois + ladoTres <= ladoUm ){
+
+                document.getElementById("triangulo").innerHTML = "Forma: !Não forma um triângulo!"
+
+            } else {
+
+                if(ladoUm === ladoDois && ladoDois === ladoTres){
+    
+                    document.getElementById("triangulo").innerHTML = "Forma: Triângulo Equilátero!"
+
+                } else if(ladoUm === ladoDois || ladoUm === ladoTres || ladoDois === ladoTres){
+
+                    document.getElementById("triangulo").innerHTML = "Forma: Triângulo Isósceles!"
+
+                } else {
+
+                    document.getElementById("triangulo").innerHTML = "Forma: Triângulo Escaleno!"
+
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

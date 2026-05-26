@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada</title>
+</head>
+<body>
+    <h1>Calculadora de Soma</h1>
+
+    <label for="numUm">Primeiro número</label>
+    <input id="numUm" type="number" placeholder="Primeiro número: ">
+
+    <label for="numDois">Segundo número</label>
+    <input id="numDois" type="number" placeholder="Segundo número: ">
+
+    <h2>Resultado: <span id="resultado">0</span></h2>
+
+    <button onclick="somar()">Somar</button>
+
+    <script>
+
+        function somar(){
+            let numUm = document.getElementById("numUm").value;
+            let numDois = document.getElementById("numDois").value;
+            let soma = Number(numUm) + Number(numDois)
+
+            document.getElementById("resultado").innerHTML = soma
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+
+.container {
+    gap: 2px;
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center; 
+    text-align: center;
+}
+
+.box {
+    border-radius: 10px;
+    color:aliceblue;
+    width: 200px;
+    height: 20px;
+    margin: 5px;
+    padding: 10px;
+}

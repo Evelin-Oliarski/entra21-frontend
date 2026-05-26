@@ -1,0 +1,22 @@
+body {
+    background-color: pink;
+}
+
+.card {
+    background-color: white;
+    width: 280px;
+    padding: 8px 24px 24px 24px;
+}
+
+h2 {
+    color: orange;
+}
+
+.caixa-preco {
+    border: 1px solid green;
+    width: fit-content;
+    background-color: rgb(214, 252, 158);
+    padding: 0px 8px;
+    color: rgb(44, 141, 48);
+    font-weight: 500;
+}

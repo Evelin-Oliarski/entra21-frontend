@@ -1,0 +1,19 @@
+.container {
+    gap: 20px;
+    height: 100vh;
+    display: flex;
+    background-color: rgb(228, 207, 228);
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    margin: 10px
+    
+}
+
+
+

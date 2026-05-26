@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <h1>Calculadora IMC</h1>
+
+    <label for="altura">Sua altura:</label>
+    <input id="altura" type="number" placeholder="Altura">
+
+    <label for="peso">Seu peso:</label>
+    <input id="peso" type="number" placeholder="Peso">
+
+    <h2>IMC: <span id="imc">0</span></h2>
+    <h3> <span id="mensagem"></span></h3>
+
+    <button onclick="imc()">Calcular:</button>
+
+    <script>
+
+        function imc(){
+            let altura = document.getElementById("altura").value;
+            let peso = document.getElementById("peso").value;
+            let imc = Number(peso) / (Number(altura)*Number(altura));
+
+            if(imc < 18.5){
+                document.getElementById("mensagem").innerHTML = "Baixo peso!"
+            } else if(imc > 18.5 && imc < 24.99){
+                document.getElementById("mensagem").innerHTML = "Peso normal!"
+            } else if(imc > 25 && imc < 29.99){
+                document.getElementById("mensagem").innerHTML = "Sobre peso!"
+            } else {
+                document.getElementById("mensagem").innerHTML = "Obesidade!"
+            }
+
+            document.getElementById("imc").innerHTML = imc;
+        }
+
+    </script>
+</body>
+</html>

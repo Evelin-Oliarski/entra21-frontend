@@ -1,0 +1,28 @@
+<!-- Desafio: Validação de Senha
+Crie uma lógica que valide se as senhas coincidem
+em tempo real.
+Campos: senha e confirmarSenha.
+Evento: 'keyup' no campo de confirmação.
+Se diferentes: Borda vermelha e botão desabilitado.
+Se iguais: Borda verde e botão habilitado. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="meuForm">
+        <input type="password" id="senha">
+        <label for="senha">Senha</label>
+
+        <input type="password" id="confirmarSenha">
+        <label for="confirmarSenha">Confirme sua senha</label>
+
+        <button id="botao" disabled type="submit">Enviar</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

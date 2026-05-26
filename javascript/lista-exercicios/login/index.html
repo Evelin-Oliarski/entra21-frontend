@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+
+    <label for="email">E-mail:</label>
+    <input id="email" type="email" placeholder="Digite seu e-mail">
+
+    <label for="senha">Senha:</label>
+    <input id="senha" type="password" placeholder="Digite sua senha">
+    
+    <button onclick="login()">Login</button>
+
+    <h2 id="logado"></h2>
+
+    <script>
+
+        function login(){
+
+            let email = 'evelin@gmail.com'
+            let senha = 123456789
+
+            let uEmail = document.getElementById("email").value;
+            let uSenha = document.getElementById("senha").value;
+
+            if(uEmail == email && uSenha == senha){
+                document.getElementById("logado").innerHTML = 'Acesso liberado!'
+            } else {
+                document.getElementById("logado").innerHTML = 'Credenciais incorretas!'
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversor de Texto</title>
+</head>
+<body>
+    <h1>Inversor de Frases</h1>
+
+    <label>Digite uma frase:</label>
+    <input id="frase" type="text" placeholder="Digite aqui">
+
+    <button onclick="inverter()">Inverter</button>
+
+    <h2 id="resultado"></h2>
+
+    <script>
+        function inverter(){
+
+            let frase = document.getElementById("frase").value;
+
+            let invertida = frase.split("").reverse().join("");
+
+            document.getElementById("resultado").innerHTML = "Frase invertida: " + invertida;
+        }
+    </script>
+</body>
+</html>

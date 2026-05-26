@@ -1,0 +1,30 @@
+.tabela {
+    border: 15px solid rgb(202, 44, 44);
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: sseparate;
+    overflow: hidden; /*Ele corta tudo que está fora da borda arredondada*/
+    border-spacing: 0; /*Define o espaçamento entre as linhas*/
+}
+
+th, td {
+    border: 1px solid rgb(202, 44, 44);
+    border-radius: 10px;
+    padding: 12px; 
+    text-align: center;
+}
+
+th {
+    background-color: rgb(202, 44, 44);
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: rgb(255, 226, 210);
+}
