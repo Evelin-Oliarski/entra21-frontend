@@ -1,0 +1,5 @@
+/* classe de erro definida no CSS — o JS só liga e desliga */
+.borda-vermelha {
+    border: 2px solid red;
+    background-color: #fff0f0;
+}
