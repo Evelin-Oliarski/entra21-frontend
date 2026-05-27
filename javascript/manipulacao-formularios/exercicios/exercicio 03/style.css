@@ -1,0 +1,10 @@
+/*Essas classes não são aplicadas direto no HTML — 
+o JavaScript vai adicioná-las ou removê-las dependendo da validação.*/
+
+.input-invalido{
+    border: 2px solid red;
+}
+
+.input-valido{
+    border: 2px solid green;
+}

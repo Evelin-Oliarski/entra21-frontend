@@ -1,0 +1,9 @@
+.borda-vermelha {
+    border: 2px solid red;
+}
+  
+span {
+    color: red;
+    display: block;
+    font-size: 12px;
+}

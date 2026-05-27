@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Buttons que Mudam o Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="form">
+        <p>Escolha:</p>
+
+        <!--Por que os dois têm name="tipo"?
+         O navegador usa o name para saber que eles fazem parte do mesmo grupo. 
+         Isso garante que só um pode ser selecionado por vez.-->
+
+        <input type="radio" value="fisica" name="tipo">
+        <label for="fisica">Pessoa Física</label>
+
+        <input type="radio" value="juridica" name="tipo">
+        <label for="juridica">Pessoa Jurídica</label>
+
+        <br/>
+
+        <input type="text" id="documento" placeholder="CPF" />
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

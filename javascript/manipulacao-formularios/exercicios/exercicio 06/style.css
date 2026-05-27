@@ -1,0 +1,7 @@
+.senha-ok{
+    border: 2px solid rgb(78, 203, 212);
+}
+
+.senha-erro{
+    border: 2px solid red;
+}
